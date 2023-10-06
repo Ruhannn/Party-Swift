@@ -1,8 +1,10 @@
+import ServicesSection from "../ServicesSection/ServicesSection";
+
 const Home = () => {
   return (
     <>
       <section className="mx-auto px-4 lg:px-16">
-        <div className="carousel relative overflow-hidden rounded-lg">
+        <div className="carousel h-[720px] relative overflow-hidden rounded-lg">
           <div id="slide1" className="carousel-item relative w-full">
             <img
               src="https://i.ibb.co/vwLLrRq/priscilla-du-preez-W3-SEy-ZODn8-U-unsplash.jpg"
@@ -66,6 +68,9 @@ const Home = () => {
               </a>
             </div>
           </div>
+        </div>
+        <div className=" gap-8 p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <ServicesSection></ServicesSection>
         </div>
       </section>
     </>
