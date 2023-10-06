@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Wedding Planning",
+    "image": "https://i.ibb.co/SrXhZDT/female-wedding-planner-working-with-bride-groom.jpg",
+    "price": "$1000",
+    "description": "Let us make your special day unforgettable. From venue selection to decorations, we've got it covered!"
+  },
+  {
+    "name": "Birthday Bash Organization",
+    "image": "https://i.ibb.co/88C72cM/group-happy-business-colleagues-talking-christmas-party-office-637285-9533.jpg",
+    "price": "$500",
+    "description": "Celebrate birthdays in style! We handle everything, so you can focus on enjoying the party."
+  },
+  {
+    "name": "Anniversary Celebration",
+    "image": "https://i.ibb.co/D7mH3Gh/i-Stock-860821478.jpg",
+    "price": "$800",
+    "description": "Mark milestones with our expert planning. Romantic settings and thoughtful details for your special day."
+  },
+  {
+    "name": "Engagement Party Coordination",
+    "image": "https://i.ibb.co/SfdpHWf/Romantic-Candle-Light-Dinner-at-Brasserie-Royale.jpg",
+    "price": "$600",
+    "description": "Start your journey together with a memorable engagement party. We take care of the details!"
+  },
+  {
+    "name": "Retirement Farewell",
+    "image": "https://i.ibb.co/D7mH3Gh/i-Stock-860821478.jpg",
+    "price": "$400",
+    "description": "Bid farewell to a colleague with a classy retirement party. We handle the logistics for a stress-free event."
+  },
+  {
+    "name": "Baby Shower Hosting",
+    "image": "https://i.ibb.co/ySRT1gw/front-view-couple-gender-reveal-party-23-2150256593.jpg",
+    "price": "$300",
+    "description": "Welcome the newest member of the family with a heartwarming baby shower. We make it adorable and stress-free."
+  },
+  {
+    "name": "Holiday Party Planning",
+    "image": "https://i.ibb.co/88C72cM/group-happy-business-colleagues-talking-christmas-party-office-637285-9533.jpg",
+    "price": "$700",
+    "description": "Spread joy with a festive holiday party! Our planning ensures a cheerful atmosphere for your guests."
+  },
+  {
+    "name": "Corporate Event Management",
+    "image": "https://i.ibb.co/HqdtyfZ/banquet-manager-setting-table-event.jpg",
+    "price": "$1200",
+    "description": "Host seamless corporate events that leave a lasting impression. We handle logistics for a professional touch."
+  }
+]
