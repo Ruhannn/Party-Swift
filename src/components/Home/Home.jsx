@@ -1,10 +1,14 @@
+// import Customer from "../Customer/Customer";
+import Reviews from "../Reviews/Reviews";
 import ServicesSection from "../ServicesSection/ServicesSection";
+import Team from "../Team/Team";
+import CountdownTimer from "../Timer/Timer";
 
 const Home = () => {
   return (
     <>
-      <section className="mx-auto px-4 lg:px-16">
-        <div className="carousel h-[720px] relative overflow-hidden rounded-lg">
+      <section className="mx-auto dark:bg-[#282a36] px-4 lg:px-16">
+        <div className="carousel mt-10 lg:h-[720px] relative overflow-hidden rounded-lg">
           <div id="slide1" className="carousel-item relative w-full">
             <img
               src="https://i.ibb.co/vwLLrRq/priscilla-du-preez-W3-SEy-ZODn8-U-unsplash.jpg"
@@ -69,9 +73,26 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <h1 className="text-center font-extrabold text-5xl my-8 text-blue-500">
+          Our service
+        </h1>
         <div className=" gap-8 p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <ServicesSection></ServicesSection>
         </div>
+        <Team></Team>
+
+        <div>
+          <CountdownTimer></CountdownTimer>
+        </div>
+        <div className="flex justify-around">
+          <img
+            className="h-[626px] sticky top-0 hidden lg:block"
+            src="https://i.ibb.co/xDQmF2Z/Picbg2-waifu2x-noise0-scale2x-1.png"
+            alt="Satisfied Girl"
+          />
+          <Reviews />
+        </div>
+        <div></div>
       </section>
     </>
   );

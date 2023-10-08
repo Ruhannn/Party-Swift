@@ -1,11 +1,7 @@
-
 const Footer = () => {
   return (
     <>
-      <div id="bubble-wrapper">
-
-      </div>
-      <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+      <footer className="footer dark:bg-[#191a21] dark:text-[#f8f8f2] footer-center p-10 bg-base-300 text-base-content">
         <nav className="grid grid-flow-col gap-4">
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
