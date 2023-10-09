@@ -1,47 +1,60 @@
 [
   {
+    "id": 1,
     "name": "Wedding Planning",
     "image": "https://i.ibb.co/SrXhZDT/female-wedding-planner-working-with-bride-groom.jpg",
     "price": "$1000",
     "description": "Let us make your special day unforgettable. From venue selection to decorations, we've got it covered!"
   },
   {
+    "id": 2,
+
     "name": "Birthday Bash Organization",
     "image": "https://i.ibb.co/88C72cM/group-happy-business-colleagues-talking-christmas-party-office-637285-9533.jpg",
     "price": "$500",
     "description": "Celebrate birthdays in style! We handle everything, so you can focus on enjoying the party."
   },
   {
+    "id": 3,
+
     "name": "Anniversary Celebration",
     "image": "https://i.ibb.co/D7mH3Gh/i-Stock-860821478.jpg",
     "price": "$800",
     "description": "Mark milestones with our expert planning. Romantic settings and thoughtful details for your special day."
   },
   {
+    "id": 4,
+
     "name": "Engagement Party Coordination",
     "image": "https://i.ibb.co/SfdpHWf/Romantic-Candle-Light-Dinner-at-Brasserie-Royale.jpg",
     "price": "$600",
     "description": "Start your journey together with a memorable engagement party. We take care of the details!"
   },
   {
+    "id": 5,
+
     "name": "Retirement Farewell",
     "image": "https://i.ibb.co/D10JmFV/people-meeting-family-reunion-23-2149153769.jpg",
     "price": "$400",
     "description": "Bid farewell to a colleague with a classy retirement party. We handle the logistics for a stress-free event."
   },
   {
+    "id": 6,
+
     "name": "Baby Shower Hosting",
     "image": "https://i.ibb.co/ySRT1gw/front-view-couple-gender-reveal-party-23-2150256593.jpg",
     "price": "$300",
     "description": "Welcome the newest member of the family with a heartwarming baby shower. We make it adorable and stress-free."
   },
   {
+    "id": 7,
     "name": "Holiday Party Planning",
     "image": "https://i.ibb.co/88C72cM/group-happy-business-colleagues-talking-christmas-party-office-637285-9533.jpg",
     "price": "$700",
     "description": "Spread joy with a festive holiday party! Our planning ensures a cheerful atmosphere for your guests."
   },
   {
+    "id": 8,
     "name": "Corporate Event Management",
     "image": "https://i.ibb.co/HqdtyfZ/banquet-manager-setting-table-event.jpg",
     "price": "$1200",

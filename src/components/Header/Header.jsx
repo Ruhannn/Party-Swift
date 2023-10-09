@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { FaSun, FaMoon } from "react-icons/fa";
+import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 const Header = () => {
   const getNavLinkClass = ({ isActive }) => `
   transition-colors ${
@@ -30,7 +32,7 @@ const Header = () => {
   const handleThemeSwitch = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
-
+  const { logOut, user } = useContext(AuthContext);
   const NavLinks = (
     <>
       <NavLink to="/" className={getNavLinkClass}>
@@ -38,18 +40,22 @@ const Header = () => {
           <a>Home</a>
         </li>
       </NavLink>
-      <NavLink to="/login" className={getNavLinkClass}>
+      <NavLink to="/" className={getNavLinkClass}>
         <li>
-          <a>Log In</a>
+          <a>DashBoard</a>
         </li>
       </NavLink>
-      <NavLink to="/signup" className={getNavLinkClass}>
+      <NavLink to="/Blog" className={getNavLinkClass}>
         <li>
-          <a>Sign Up</a>
+          <a>Blog</a>
         </li>
       </NavLink>
     </>
   );
+  const handleLogOut = () => {
+    logOut();
+    toast.success("Logged Out Successfully");
+  };
   return (
     <div className="navbar dark:bg-[#1a1b26] bg-base-100">
       <div className="navbar-start">
@@ -71,7 +77,7 @@ const Header = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3  z-[1] p-2 shadow bg-base-100c  dark:bg-[#1a1b26] rounded-box gap-6 w-52">
+            className="menu menu-sm dropdown-content mt-3  z-[1] p-2 shadow bg-base-100c dark:bg-[#1a1b26] rounded-box gap-6 w-52">
             {NavLinks}
           </ul>
         </div>
@@ -92,29 +98,66 @@ const Header = () => {
         </button>
 
         <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              {theme === "dark" ? (
-                <img src="https://cdn.discordapp.com/attachments/1071386240252907530/1159863528178602014/CSblg2s.png?ex=65329216&is=65201d16&hm=c2d495cbda530a4c9f6a2b697ffe37b31796eba26dde9f73e3a16e644ff18f5c&" />
-                
-                ) : (
-                  <img src="https://cdn.discordapp.com/attachments/1071386240252907530/1159863527847248034/bu8p9SX.png?ex=65329216&is=65201d16&hm=43db634799e0316e6bb955c35eb5d4b80c006dd43afccd55ad007c85f0502e04&" />
-              )}
+          {user ? (
+            <div>
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full dark:bg-white">
+                  {theme === "dark" ? (
+                    <img
+                      src={
+                        user.photoURL
+                        ||
+                        "https://cdn.discordapp.com/attachments/1071386240252907530/1159863528178602014/CSblg2s.png?ex=65329216&is=65201d16&hm=c2d495cbda530a4c9f6a2b697ffe37b31796eba26dde9f73e3a16e644ff18f5c&"
+                      }
+                    />
+                  ) : (
+                    <img
+                      src={
+                        user.photoURL
+                        ||
+                        "https://cdn.discordapp.com/attachments/1071386240252907530/1159863527847248034/bu8p9SX.png?ex=65329216&is=65201d16&hm=43db634799e0316e6bb955c35eb5d4b80c006dd43afccd55ad007c85f0502e04&"
+                      }
+                    />
+                  )}
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 dark:bg-[#282a36] dark:text-[#f8f8f2] dark:hover:text-[#bfbf6c] rounded-box w-52">
+                <li>
+                  <a className="justify-between">{user.email}</a>
+                </li>
+                <li>
+                  <a>Settings</a>
+                </li>
+                <li>
+                  <a onClick={handleLogOut}>Logout</a>
+                </li>
+              </ul>
             </div>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 dark:bg-[#282a36] dark:text-[#f8f8f2] rounded-box w-52">
-            <li>
-              <a className="justify-between">Profile</a>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
-            </li>
-          </ul>
+          ) : (
+            <div className="dropdown dropdown-end">
+              <label
+                tabIndex={0}
+                className="btn m-1 bg-base-300 text-black dark:bg-[#3d3f58] dark:text-white hover border-none hover:text-black">
+                Login/SignUp
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content gap-5 z-[1] menu p-2 shadow bg-[#1A1B26] text-white rounded-box w-52">
+                <Link
+                  to="/login"
+                  className=" py-2 px-4 rounded  hover:bg-blue-600 transition duration-300">
+                  Login
+                </Link>
+                <Link
+                  to="/signup"
+                  className=" text-white py-2 px-4 rounded  hover:bg-blue-600 transition duration-300">
+                  Sign up
+                </Link>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>

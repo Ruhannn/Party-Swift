@@ -1,10 +1,16 @@
-// import Customer from "../Customer/Customer";
+import { toast } from "react-toastify";
 import Reviews from "../Reviews/Reviews";
 import ServicesSection from "../ServicesSection/ServicesSection";
 import Team from "../Team/Team";
 import CountdownTimer from "../Timer/Timer";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <>
       <section className="mx-auto dark:bg-[#282a36] px-4 lg:px-16">
@@ -73,21 +79,26 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <h1 className="text-center font-extrabold text-5xl my-8 text-blue-500">
+        <h1
+          className="text-center font-extrabold text-5xl my-8 text-blue-500"
+          data-aos="fade-up">
           Our service
         </h1>
-        <div className=" gap-8 p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          className=" gap-8 p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          data-aos="fade-up">
           <ServicesSection></ServicesSection>
         </div>
-        <Team></Team>
-
-        <div>
+        <div  data-aos="fade-up">
+          <Team></Team>
+        </div>
+        <div data-aos="fade-down">
           <CountdownTimer></CountdownTimer>
         </div>
-        <div className="flex justify-around">
+        <div className="flex justify-around" data-aos="fade-right">
           <img
             className="h-[626px] sticky top-0 hidden lg:block"
-            src="https://i.ibb.co/xDQmF2Z/Picbg2-waifu2x-noise0-scale2x-1.png"
+            src="https://cdn.discordapp.com/attachments/1151870132549865536/1160922550197555272/kamilike.png"
             alt="Satisfied Girl"
           />
           <Reviews />
@@ -97,5 +108,4 @@ const Home = () => {
     </>
   );
 };
-
 export default Home;

@@ -1,3 +1,4 @@
+
 const style = `
 section {
   display: grid;
@@ -65,7 +66,6 @@ section {
   transition-delay: 400ms;
 }
 `;
-
 const Team = () => {
   return (
     <>
