@@ -35,12 +35,10 @@ const SignUp = () => {
 
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
         setLoading(false);
         toast.success("Secure Access, Unlimited Smiles!", { theme: "dark" });
       })
       .catch((error) => {
-        console.log(error.code);
         if (error.code === "auth/email-already-in-use") {
           toast.error("Email exist already, Please try with a new email.");
         }

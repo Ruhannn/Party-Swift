@@ -40,9 +40,9 @@ const Header = () => {
           <a>Home</a>
         </li>
       </NavLink>
-      <NavLink to="/" className={getNavLinkClass}>
+      <NavLink to="/faqSection" className={getNavLinkClass}>
         <li>
-          <a>DashBoard</a>
+          <a>F.A.Q</a>
         </li>
       </NavLink>
       <NavLink to="/Blog" className={getNavLinkClass}>
@@ -105,7 +105,7 @@ const Header = () => {
                   {theme === "dark" ? (
                     <img
                       src={
-                        user.photoURL
+                        user?.photoURL
                         ||
                         "https://cdn.discordapp.com/attachments/1071386240252907530/1159863528178602014/CSblg2s.png?ex=65329216&is=65201d16&hm=c2d495cbda530a4c9f6a2b697ffe37b31796eba26dde9f73e3a16e644ff18f5c&"
                       }
@@ -113,7 +113,7 @@ const Header = () => {
                   ) : (
                     <img
                       src={
-                        user.photoURL
+                        user?.photoURL
                         ||
                         "https://cdn.discordapp.com/attachments/1071386240252907530/1159863527847248034/bu8p9SX.png?ex=65329216&is=65201d16&hm=43db634799e0316e6bb955c35eb5d4b80c006dd43afccd55ad007c85f0502e04&"
                       }

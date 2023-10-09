@@ -10,12 +10,15 @@ import Details from "./components/Details/Details";
 import AuthProvider from "./components/Provider/AuthProvider";
 import PrivateRoute from "./components/Route/PrivateRoute";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import Blog from "./components/Blog/Blog";
+import FAQSection from "./components/FAQSection/FAQSection";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/login",
@@ -31,11 +34,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/Blog",
-        element:<Blog></Blog>,
+        element: (
+          <PrivateRoute>
+            <Blog></Blog>
+          </PrivateRoute>
+        ),
       },
       {
-        path: "/",
-        element: <Home></Home>,
+        path: "/faqSection",
+        element: (
+          <PrivateRoute>
+            <FAQSection></FAQSection>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/details/:id",
@@ -52,7 +63,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
-      <ToastContainer />
+      <ToastContainer position="bottom-right" />
     </AuthProvider>
   </React.StrictMode>
 );

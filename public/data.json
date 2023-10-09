@@ -59,5 +59,12 @@
     "image": "https://i.ibb.co/HqdtyfZ/banquet-manager-setting-table-event.jpg",
     "price": "$1200",
     "description": "Host seamless corporate events that leave a lasting impression. We handle logistics for a professional touch."
+  },
+  {
+    "id": 9,
+    "name": "Surprise Proposal Arrangement",
+    "image": "https://i.ibb.co/ZTSTNFY/dylan-sauerwein-eosiq-Li9-Dm-Y-unsplash.jpg",
+    "price": "$350",
+    "description": "Plan the perfect moment to pop the question with our surprise proposal arrangement. We handle the details for an unforgettable proposal."
   }
 ]
